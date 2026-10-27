@@ -1,42 +1,21 @@
-const searchBox = document.getElementById("searchBox");
-
-if(searchBox){
-
-searchBox.addEventListener("keyup", function(){
-
-let value = this.value.toLowerCase();
-
-let cards = document.querySelectorAll(".app-card");
-
-cards.forEach(function(card){
-
-let text = card.innerText.toLowerCase();
-
-if(text.indexOf(value) > -1){
-
-card.style.display="flex";
-
-}else{
-
-card.style.display="none";
-
-}
-
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBox = document.getElementById("searchBox");
+  const cards = Array.from(document.querySelectorAll(".app-card"));
+  if (searchBox) {
+    searchBox.addEventListener("input", function () {
+      const query = searchBox.value.trim().toLocaleLowerCase();
+      cards.forEach(function (card) {
+        const content = (card.textContent || "").toLocaleLowerCase();
+        card.style.display = content.includes(query) ? "" : "none";
+      });
+    });
+  }
 });
-
-});
-
-}
-
 function shareWebsite() {
-    if (navigator.share) {
-        navigator.share({
-            title: "AYUKSHA Free Earning Apps",
-            text: "Download all latest Yono Games",
-            url: window.location.href
-        });
-    } else {
-        navigator.clipboard.writeText(window.location.href);
-        alert("Link Copied!");
-    }
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({title:"All Yono Games",text:"Explore gaming app listings",url:url}).catch(function(){});
+  } else if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function(){alert("Link copied!");}).catch(function(){window.prompt("Copy this link:",url);});
+  } else { window.prompt("Copy this link:",url); }
 }
