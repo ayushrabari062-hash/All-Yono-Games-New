@@ -1,0 +1,494 @@
+/* =========================================
+   AYUKSHA PREMIUM STYLE - CLEAN VERSION
+   ========================================= */
+
+:root{
+  --bg:#0b0f19;
+  --header:#111827;
+  --card:#171f2f;
+  --card-hover:#1c2638;
+
+  /* Premium balanced accent colors */
+  --primary:#f4b942;
+  --primary-hover:#ffd166;
+  --orange:#ff9f43;
+
+  --text:#ffffff;
+  --muted:#cfd3dc;
+  --soft:#9ca3af;
+
+  --border:rgba(244,185,66,.18);
+  --border-hover:rgba(244,185,66,.65);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+.container{
+  width:95%;
+  max-width:1200px;
+  margin:auto;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header{
+  background:var(--header);
+  padding:18px 0;
+  text-align:center;
+  border-bottom:2px solid var(--primary);
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.header h1{
+  font-size:38px;
+  font-weight:800;
+  color:var(--primary);
+  letter-spacing:2px;
+  line-height:1.2;
+}
+
+.header p{
+  color:#d1d5db;
+  margin-top:5px;
+}
+
+
+/* =========================================
+   BANNER
+   ========================================= */
+
+.banner{
+  padding:25px 0;
+}
+
+.banner img{
+  width:100%;
+  border-radius:20px;
+  display:block;
+}
+
+
+/* =========================================
+   SEARCH BOX
+   ========================================= */
+
+#searchBox{
+  width:100%;
+  margin-top:20px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  font-size:16px;
+  outline:none;
+  background:#1f2937;
+  color:#fff;
+  transition:.25s ease;
+}
+
+#searchBox::placeholder{
+  color:#aeb5c0;
+}
+
+#searchBox:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(244,185,66,.10);
+}
+
+
+/* =========================================
+   APPS SECTION
+   ========================================= */
+
+.apps{
+  padding:35px 0;
+}
+
+.apps h2{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:25px;
+  color:var(--primary);
+}
+
+
+/* Optional grid support if #appList is used */
+
+#appList{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:18px;
+}
+
+
+/* =========================================
+   APP CARD
+   ========================================= */
+
+.app-card{
+  width:100%;
+  background:var(--card);
+  border-radius:18px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border:1px solid var(--border);
+  transition:.25s ease;
+  overflow:hidden;
+}
+
+.app-card:hover{
+  transform:translateY(-3px);
+  background:var(--card-hover);
+  border-color:var(--border-hover);
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+
+/* App Image */
+
+.app-card img{
+  width:65px;
+  height:65px;
+  min-width:65px;
+  border-radius:15px;
+  object-fit:cover;
+}
+
+
+/* =========================================
+   APP INFO
+   ========================================= */
+
+.app-card > div:not(.container){
+  flex:1;
+  min-width:0;
+}
+
+.app-info{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+
+
+/* App Name */
+
+.app-card span,
+.app-name{
+  display:block;
+  font-size:18px;
+  font-weight:700;
+  color:#ffffff;
+  line-height:1.3;
+}
+
+
+/* =========================================
+   BONUS + WITHDRAWAL
+   Works for BOTH small and p tags
+   ========================================= */
+
+.app-card small,
+.app-info p{
+  display:block;
+  margin:0;
+  font-size:14px !important;
+  font-weight:500;
+  line-height:1.45;
+  white-space:nowrap;
+}
+
+
+/* Bonus */
+
+.app-card small:first-of-type,
+.app-info p:first-of-type,
+.bonus-line{
+  color:var(--orange) !important;
+}
+
+
+/* Withdrawal */
+
+.app-card small:last-of-type,
+.app-info p:last-of-type,
+.withdraw-line{
+  color:var(--muted) !important;
+}
+
+
+/* =========================================
+   DOWNLOAD / OPEN BUTTON
+   ========================================= */
+
+.app-card a{
+  flex-shrink:0;
+  min-width:96px;
+  text-align:center;
+  text-decoration:none;
+  background:var(--primary);
+  color:#151515;
+  padding:11px 14px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:700;
+  transition:.25s ease;
+}
+
+.app-card a:hover{
+  background:var(--primary-hover);
+  transform:translateY(-1px);
+}
+
+
+/* =========================================
+   SHARE BUTTON
+   ========================================= */
+
+.share-box{
+  text-align:center;
+  margin:30px 0;
+}
+
+.share-box button,
+.share-btn{
+  background:var(--primary);
+  color:#151515;
+  border:none;
+  padding:14px 28px;
+  border-radius:10px;
+  font-size:17px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s ease;
+  font-family:'Poppins',sans-serif;
+}
+
+.share-box button:hover,
+.share-btn:hover{
+  background:var(--primary-hover);
+  transform:scale(1.03);
+}
+
+
+/* =========================================
+   LINKS + GENERAL TEXT
+   ========================================= */
+
+a{
+  transition:.2s ease;
+}
+
+section a:not(.app-card a){
+  color:var(--primary);
+}
+
+section a:not(.app-card a):hover{
+  color:var(--primary-hover);
+}
+
+
+/* =========================================
+   LEGAL BOX
+   ========================================= */
+
+.legal-box{
+  background:#101a2d;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+  margin:20px auto;
+  max-width:900px;
+}
+
+.legal-box h2{
+  color:var(--primary);
+  margin-bottom:12px;
+  font-size:22px;
+}
+
+.legal-box p,
+.legal-box li{
+  color:#cfcfcf;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.legal-box ul{
+  padding-left:20px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer{
+  text-align:center;
+  padding:25px 20px;
+  color:var(--soft);
+}
+
+footer .legal-box{
+  text-align:left;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media(max-width:768px){
+
+  .container{
+    width:94%;
+  }
+
+  .header{
+    padding:15px 0;
+  }
+
+  .header h1{
+    font-size:29px;
+    letter-spacing:1px;
+  }
+
+  .header p{
+    font-size:13px;
+  }
+
+  .banner{
+    padding:18px 0;
+  }
+
+  .banner img{
+    border-radius:15px;
+  }
+
+  #searchBox{
+    margin-top:15px;
+    padding:14px;
+    font-size:15px;
+  }
+
+  .apps{
+    padding:28px 0;
+  }
+
+  .apps h2{
+    font-size:24px;
+    margin-bottom:20px;
+  }
+
+  #appList{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .app-card{
+    padding:13px;
+    gap:11px;
+    border-radius:15px;
+  }
+
+  .app-card img{
+    width:55px;
+    height:55px;
+    min-width:55px;
+    border-radius:13px;
+  }
+
+  .app-card span,
+  .app-name{
+    font-size:16px;
+  }
+
+  .app-card small,
+  .app-info p{
+    font-size:12px !important;
+    line-height:1.4;
+  }
+
+  .app-card a{
+    min-width:82px;
+    padding:9px 8px;
+    font-size:12px;
+    border-radius:9px;
+  }
+
+  .share-box{
+    margin:25px 0;
+  }
+
+  .share-box button,
+  .share-btn{
+    padding:13px 22px;
+    font-size:15px;
+  }
+
+  .legal-box{
+    margin:16px;
+    padding:16px;
+    border-radius:15px;
+  }
+
+  .legal-box h2{
+    font-size:20px;
+  }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   Prevents withdrawal text wrapping
+   ========================================= */
+
+@media(max-width:380px){
+
+  .app-card{
+    gap:9px;
+    padding:11px;
+  }
+
+  .app-card img{
+    width:50px;
+    height:50px;
+    min-width:50px;
+  }
+
+  .app-card a{
+    min-width:74px;
+    font-size:11px;
+    padding:9px 6px;
+  }
+
+  .app-card small,
+  .app-info p{
+    font-size:11px !important;
+  }
+
+    }
