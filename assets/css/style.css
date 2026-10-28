@@ -55,3 +55,19 @@
   }
 }
 
+
+
+/* Compact SEO interlinking box replacing the large hero banner */
+.seo-interlink-box{
+  background:linear-gradient(115deg,#123c48 0%,#087f83 58%,#12bfc0 100%);
+  color:#fff;border-radius:18px;padding:14px 17px;margin:0 0 14px;
+  box-shadow:0 6px 18px rgba(18,60,72,.12);font-size:13px;line-height:1.55;
+}
+.seo-interlink-box p{color:#fff!important;margin:0}
+.seo-interlink-box a{color:#fff!important;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.category-tabs{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 4px}
+.category-tab{min-width:0;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 8px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--muted);font-weight:800;font-size:clamp(13px,3.5vw,17px);text-align:center}
+.category-tab.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 3px 0 rgba(20,40,79,.08)}
+.category-tab.inactive{background:#fff;color:#7b879b;border-color:#dce4f1}
+.category-tab .tab-note{display:block;font-size:10px;font-weight:600;opacity:.85}
+@media(max-width:380px){.seo-interlink-box{padding:12px 13px;font-size:12px}.category-tab{padding:11px 5px;gap:5px}}
