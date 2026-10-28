@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://allnewyonogameshub.com/sitemap.xml
+
+Sitemap: https://playallyonogames.com/sitemap.xml
