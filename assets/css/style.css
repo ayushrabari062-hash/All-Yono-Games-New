@@ -71,3 +71,13 @@
 .category-tab.inactive{background:#fff;color:#7b879b;border-color:#dce4f1}
 .category-tab .tab-note{display:block;font-size:10px;font-weight:600;opacity:.85}
 @media(max-width:380px){.seo-interlink-box{padding:12px 13px;font-size:12px}.category-tab{padding:11px 5px;gap:5px}}
+
+/* October 2026 mobile card and homepage SEO improvements */
+@media(max-width:650px){
+  .relgrid{grid-template-columns:minmax(0,1fr)!important;gap:10px!important}
+  .rel{display:grid!important;grid-template-columns:45px minmax(0,1fr) auto!important;align-items:center!important;width:100%!important;min-width:0!important;gap:9px!important}
+  .rel b{max-width:76px!important;white-space:normal!important;overflow-wrap:anywhere!important;text-align:right!important}
+}
+.seo-interlink-box{padding:19px 21px!important;font-size:15px!important;line-height:1.8!important}
+.seo-interlink-box p{font-size:inherit!important;line-height:inherit!important}
+@media(max-width:380px){.seo-interlink-box{padding:15px!important;font-size:14px!important}}
